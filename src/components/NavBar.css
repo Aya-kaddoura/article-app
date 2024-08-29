@@ -1,0 +1,21 @@
+.text-main{
+    color: #994508 !important;
+}
+.navbar{
+    background-image: url('../Images/header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container-fluid{
+    backdrop-filter: blur(55px)!important;
+}
+
+.nav-link:hover{
+    color: #994508 !important;
+    transition: .3s;
+}
+
+.auth-btn .nav-link:hover{
+    color: #fff !important;
+}

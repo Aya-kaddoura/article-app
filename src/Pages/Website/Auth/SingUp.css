@@ -1,0 +1,24 @@
+.imgBG{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../Images/header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.imgBG form{
+    max-width: 350px !important;
+    backdrop-filter: blur(55px);
+}
+.imgBG form input{
+    background: inherit;
+}
+.imgBG form input:focus,.imgBG form input:active{
+    background: inherit;
+}
+form input:focus-visible,
+form textarea:focus-visible{
+    outline: none;
+    background: inherit;
+
+}
+

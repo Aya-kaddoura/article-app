@@ -1,0 +1,18 @@
+.bg-main {
+    background-color: #994508;
+}
+
+.write {
+    background-image: url('../../Images/write article.jpg');
+    background-size: cover;
+}
+
+.write-form {
+    backdrop-filter: blur(55px)
+}
+
+.write-form input,
+.write textarea {
+    background: inherit;
+}
+

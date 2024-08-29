@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Website/Home";
+import SignUp from "./Pages/Website/Auth/SignUp";
+import LogIn from "./Pages/Website/Auth/LogIn";
+import Articales from "./Pages/Articles/Articles";
+import WriteArticles from "./Pages/Articles/WriteArticle";
+import RequierAuth from "./Pages/Website/Auth/RequierAuth";
+import PersistLogin from "./Pages/Website/Auth/PresistLogin";
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/register" element={<SignUp />}></Route>
+        <Route path="/login" element={<LogIn />}></Route>
+        <Route element={<PersistLogin />}>
+          <Route element={<RequierAuth />} >
+            <Route path="/articles" element={<Articales />}></Route>
+            <Route path="/writeArticles" element={<WriteArticles />}></Route>
+          </Route>
+        </Route>
+      </Routes>
     </div>
   );
 }
 
-export default App;
