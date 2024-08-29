@@ -5,6 +5,6 @@ export default function RequierAuth(){
     const user = useContext(User);
     const location = useLocation();
     return user.auth ?
-    (<Outlet/>) : 
-    (<Navigate state={{form:location}} to="/login" />);
+        (<Outlet/>) : 
+        (<Navigate state={{form:location}} to="/login" />);
 }

@@ -21,7 +21,7 @@ export default function SignUp(){
         e.preventDefault();
         setAccept(true);
         try{
-            let res = await axios.post('https://pimaerm7.infinityfree.com/api/register',{
+            let res = await axios.post('http://127.0.0.1:8000/api/register',{
                 name:name,
                 email:email,
                 password:password,
